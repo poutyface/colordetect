@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+}
+
 /*JUITTER PLUGIN CSS
 -------------------------------------------*/
 #juitterContainer{margin-bottom: 20px} /*Juitter container*/
