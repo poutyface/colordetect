@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.juitter.js"></script>
+    <script type="text/javascript" src="system.js"></script>
+    <script type="text/javascript" src="colors.js"></script>
+    <script type="text/javascript">
+      $(function (){
+      var width = 256;
+      var height = 256;
+      var source = $("#source").get(0).getContext('2d');
+      var img = new Image();
+      img.src = "./images/sample.jpg";
+      img.onload = function() {
+        source.drawImage(img, 0, 0);
+        $("#source").click(function (e){
+        var color = detect_color(source, e.pageX - $("#source").position().left, e.pageY - $("#source").position().top);
+        insert_color_name(color);
+        $(".jLinks").removeClass("on");
+         $(this).addClass("on");
+         $.Juitter.start({
+         searchType:"searchWord",
+         searchObject: color,
+         live:"live-120" });
+
+        return false;
+        });
+      };
+      })
+    </script>
+  </head>
+  <body >
+    <canvas id="source" width="658" height="440"></canvas>
+    <div id="info">
+      <div id="color_name"></div>
+      <div id="juitterContainer"></div>
+    </div>
+  </body>
+</html>

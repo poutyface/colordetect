@@ -1,0 +1,20 @@
+/*JUITTER PLUGIN CSS
+-------------------------------------------*/
+#juitterContainer{margin-bottom: 20px} /*Juitter container*/
+#juitterContainer .twittList{margin:0;padding:0;} /* UL that will contain the list of tweets */
+/* Bellow the list of tweets "<li>" */
+#juitterContainer .twittLI{list-style:none;background:#EEFDEA;margin:0;padding:5px 0 0 0;border-bottom:dashed 1px #CAF8C9;padding:3px;clear:both; font-size:0.8em;}
+#juitterContainer .twittList SPAN.time{color:#777;font-size:0.8em}
+#juitterContainer .twittList A{color:#006600; font-size:0.9em;} /*Links inside the tweets list */
+/* Bellow the CSS for the avatar image  */
+#juitterContainer .juitterAvatar{float:left;border:solid 1px #D3EECA;background:#FFF;margin-right:5px;padding:2px;width:24px;height:24px;}
+#juitterContainer .jRM{float:right;clear:both} /*read it on twitter link*/
+#juitterContainer .extLink{} /*CSS for the external links*/
+#juitterContainer .hashLink{} /*CSS for the hash links*/
+/* clearfix */
+#juitterContainer .twittLI:after{clear: both;height: 0;visibility: hidden;display: block;content: ".";}
+#juitterContainer .twittLI{display: inline-block;}
+* html #juitterContainer .twittLI{height: 1%;}
+#juitterContainer .twittLI{display: block;}
+/* */
+/*end of Juitter CSS*/
