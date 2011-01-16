@@ -2,6 +2,9 @@ body{
     margin: 0px;
 }
 
+#color_name{
+    font-size: 19px
+}
 /*JUITTER PLUGIN CSS
 -------------------------------------------*/
 #juitterContainer{margin-bottom: 20px} /*Juitter container*/
